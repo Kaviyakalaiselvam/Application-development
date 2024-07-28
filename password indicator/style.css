@@ -1,0 +1,89 @@
+ .container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 400px;
+    background: #ffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+
+}
+ html,body{
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+ }
+ .container header{
+    font-size: 24px;
+    font-weight: bold;
+ }
+ .container form{
+    margin: 5px;
+ }
+ form .field{
+      width:100%;
+      height:45px;
+      display: flex;
+      position: relative;
+ }
+ form .field input{
+    height: 100%;
+    width:100%;
+    border: 1px solid lightgrey;
+    padding-left: 15px;
+    outline:none;
+    border-radius: 5px;
+    font-size:17px;
+    transition: all 0.3s;
+ }
+ form .field input:focus{
+   border-color: #27a360;
+   box-shadow: inset 0 0 3px #2fd072;
+ }
+ form .field .showbtn{
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translate(-50%);
+   cursor:pointer;
+   font-size: 15px;
+   font-weight: 600;
+ }
+ form .indicator{
+   height: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+ }
+ form .indicator span.medium{
+   margin: 0 3px;
+ }
+ form .indicator span.before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: red;
+   border-radius: 5px;
+ }
+ form .indicator span.weak:before{
+   background-color: #ff4757;
+ }
+ form .indicator span.medium:before{
+   background-color: orange;
+ }
+ form .indicator span.strong:before{
+   background-color: #23ad;
+ }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tank">
+        <div id="water"></div>
+      </div>
+      <style>
+        #tank {
+  width: 200px;
+  height: 300px;
+  background-color: #ccc;
+  position: relative;
+}
+
+#water {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+      </style>
+      <script>
+        let waterLevel = 100; // Initial water level (percentage)
+const tank = document.getElementById('tank');
+const water = document.getElementById('water');
+
+function updateWaterLevel() {
+  water.style.height = `${waterLevel}%`;
+}
+
+function flowWater() {
+  if (waterLevel > 0) {
+    waterLevel -= 1; // Decrease water level (you can adjust the flow rate by changing this value)
+    updateWaterLevel();
+    setTimeout(flowWater, 1000); // Flow every 1 second (adjust as needed)
+  } else {
+    console.log('Tank is empty.');
+  }
+}
+
+flowWater();
+
+      </script>
+</body>
+</html>
+
+
+
+
+
